@@ -6,7 +6,7 @@ body {
 minus sign doesn't work**/
 .hero {
   width: 100vw;
-  height: 100vh;
+  height: 101vh;
   display: grid;
   background-image: url(https://images.pexels.com/photos/399160/pexels-photo-399160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
@@ -59,7 +59,9 @@ h1 {
   height: 3rem;
   width: 50rem;
   display: grid;
-  background-color: hsla(173, 100%, 28%, 0.87);
+  background-color: #D0DFDD;
+  box-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 .header {
   width: 100vw;
@@ -67,6 +69,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 6fr 1.3fr 1.3fr;
   grid-template-rows: 1fr;
+  position: absolute;
+  z-index: 100;
 }
 
 .logo {
@@ -100,109 +104,144 @@ h1 {
 
 .pg2container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  max-width: 800px;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  grid-template-rows: 100px auto;
+  max-width: 100vw;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
+  height: 70vh;
+  background-color: #D0DFDD;
+ 
+}
+
+.transition {
+
+  background-image: url(transition.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 5vw;
+  
 }
 
 .pg2whatdoido {
-  display: grid;
-  justify-items: center;
-  align-items: end;
-  height: 100vh;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr;
-}
-
-.pg2whatdoidocontent {
-  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
   line-height: 2rem;
+  padding: 15px;
 }
 
 .pg2img {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;  
   background-image: url(https://images.pexels.com/photos/1356300/pexels-photo-1356300.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-size: cover;
   background-position: center;
+  height:250px;
+  align-self: center;
+  border-radius: 500px;
+  position: relative;
+  top: -25%;
+  
 }
 
 .pg2workwithme {
-  display: grid;
-  justify-items: center;
-  align-items: end;
-  height: 100vh;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 15px;
+  line-height: 2rem;
+  text-align: end;
 }
 
-.pg2workwithmecontent {
-  display: grid;
-  padding-left: 8px;
-  margin-top: 10px;
-  line-height: 2rem;
-}
+/**positioning for the 2 links doesn#t work??**/
 
 .pg2link1 {
   width: 10rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: hsl(173, 100%, 28%);
+  background-color: hsl(355, 44%, 84%);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   color: white;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+  position: relative;
+  top:13%;
+  left:40%;
+  text-align: center;
+
+
 }
 
 .pg2link2 {
   width: 10rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: hsl(173, 100%, 28%);
+  background-color: hsl(355, 44%, 84%);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   color: white;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+  position: relative;
+  top:20%;
+  left:40%;
+  text-align: center;
 }
 
 .pg3container {
+  background: linear-gradient(
+    to bottom,
+    #D0DFDD,
+    hsl(355, 44%, 84%)
+  );
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  height: 100vh;
+  height: 30vh;
   width: 100vw;
+  padding-top: 10%;
 }
 
 .pg3img {
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
   margin: 2rem 0 0 2rem;
   background-image: url(https://crescendo.de/wp-content/uploads/2019/12/Titel_pavarotti-01-1068x1048.jpg);
   background-size: cover;
   background-position: center;
+  position: relative;
+  left: 50%;
+  margin-top: 10%;
 }
 
 .pg3content {
-  width: auto;
-  height: auto;
-  margin: 2rem 2rem 0 0;
-  background-color: rgba(0, 0, 0, 0.7);
+ 
+  margin-right: 20%;
+  margin-left: -20%;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   justify-items: center;
   padding: 5rem;
   line-height: 2rem;
 }
 
+.pg3content>h1 {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+
 .footer {
   width: 100vw;
   height: 50vh;
-  background: linear-gradient(
-    to bottom,
-    white,
-    #88ffc7 20%,
-    hsla(173, 100%, 28%) 50%
-  );
+  background-color: hsl(355, 44%, 84%);
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 5fr 4fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
@@ -219,6 +258,8 @@ h1 {
   align-items: end;
   justify-items: end;
   color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   stroke: lightslategray;
   margin-bottom: 5rem;
   margin-right: 2rem;
@@ -302,7 +343,7 @@ h1 {
 
 .wdidcontainertxt {
   display: grid;
-  background-color: hsla(173, 100%, 28%, 0.2);
+  background-color: hsla(355, 44%, 84%);
   justify-items: center;
 }
 
