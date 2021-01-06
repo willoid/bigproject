@@ -13,135 +13,91 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="shortcut icon" type="image/x-icon" href="logoshort.png" />
   </head>
   <body>
-    <header class="header">
-      <!-- the links to the pages are missing-->
-      <div class="logo">
-        <img src="logofull.png" alt="logo" style="width: 50%" />
+    <nav>
+      <div class="navBtn" id="navBtn" onclick="showNav()">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="homebtn">
-        <a href="/" style="text-decoration: none; color:black;">HOME</a>
-      </div>
-      <div class="whatdoidobtn">
-        <a href="whatdoido/index.html" style="text-decoration: none; color:black;"
-          >WHAT I DO</a
-        >
-      </div>
-      <div class="workwithmebtn">
-        <a href="workwithme/index.html" style="text-decoration: none; color:black;"
-          >WORK WITH ME</a
-        >
-      </div>
+      <ul class="navList" id="navList">
+        <li><a href="#" onclick="hideNav()">Home</a></li>
+        <li><a href="#portfolio" onclick="hideNav()">Portfolio</a></li>
+        <li><a href="#aboutMe" onclick="hideNav()">About</a></li>
+        <li><a href="#contact" onclick="hideNav()">Contact</a></li>
+        <!--displayed in mobile only-->
+        <li class="navCloseBtn" onclick="hideNav()">Close</li>
+      </ul>
+    </nav>
+    <header>
+      <div class="animated zoomIn delay-2s headerTitle">Willy Calvo</div>
+      <div class="titleLine"></div>
+      <div class="animated zoomIn delay-2s headerSubtitle">web developer</div>
+      <div class="portfolioLink"><a href="#portfolio">Check my work</a></div>
     </header>
-    <div class="animated slideInDown hero">
-      <div class="col1"></div>
-      <div class="centralcol">
-        <div class="animated zoomIn delay-2s bigname">
-          <h1>Willy Calvo</h1>
+    <main>
+      <section class="portfolio" id="portfolio">
+        <div class="sectionTitle">Projects</div>
+        <div class="portfolioController">
+          <div class="prevBtn" onclick="plusSlides(-1)">
+            <i class="fas fa-angle-left"></i>
+          </div>
+          <div class="nxtBtn" onclick="plusSlides(1)">
+            <i class="fas fa-angle-right"></i>
+          </div>
         </div>
-        <div class="animated slideInLeft delay-1s blueline"></div>
-        <div class="animated zoomIn delay-2s smallname">
-          DEVELOPEMENT | DESIGN <br />
-          PANCAKES FOR BREAKFAST
-        </div>
-      </div>
 
-      <div class="col2"></div>
-    </div>
-    <!-- onscroll doesn't work - should I define something?-->
-    <div id="pg2container" class="pg2container">
-      <div class="transition"></div>
-      <div id="pg2whatdoido" class="pg2whatdoido delay-1s">
-           <h1>
-            Are you looking for somebody who can
-            <strong>design</strong>,<strong>develop</strong>, and
-            <strong>translate</strong> your website?
-          </h1>
-          <p stlye="margin: 0;">
-            I can help you develop your webdesign exactly as you want and me and
-            my designer colleagues can create a whole new design if you require
-            it. You can get a webpage in English, German and Spanish without
-            needing translators since I am a certified translator and fluent in
-            all three languages like a native speaker.
-          </p>
-         <!--THIS SHOULD BE A HYPERL- Define Style for a -->
-        <div class="pg2link1">
-          <a href="whatdoido/index.html" style="text-decoration: none; color:white;"
-            >WHAT I DO</a
-          >
+        <div class="portfolioGallery">
+          <figure class="galleryCard">
+            <img src="/assets/bjoern.png" />
+            <figcaption>
+              <a href="https://willoid.github.io/schnukkiweb/"
+                >Website for the camera man Björn Düseler</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="/assets/laurette.png" />
+            <figcaption>
+              <a href="https://willoid.github.io/laurette/"
+                >Website for the artist Laurette le Gall</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="/assets/quiz.png" />
+            <figcaption>
+              <a href="https://willoid.github.io/selfawareness-quiz/"
+                >Quiz game for self awareness</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="galleryCard">
+            <img src="/assets/flights.png" />
+            <figcaption>
+              <a href="https://github.com/belccarvalho/Flight-Search"
+                >Mock up of a flight search engine</a
+              >
+            </figcaption>
+          </figure>
         </div>
-      </div>
-      <div id="pg2img" class="pg2img"></div>
-      <!-- delay defined for the animation on scroll line 19-->
-      <div id="pg2workwithme" class="pg2workwithme delay-1s">
-        <h1>
-            Meet me on site or let's connect remotely via skype or conference
-            call.
-          </h1>
-          <p>
-            If you wish to visit my office (also with your design team), I'll
-            make sure that you get some nice pancakes for breakfast and we will
-            discuss the steps to create your website. I am located in Leipzig
-            and my office has a nice view to one of the biggest parks in the
-            city! You can find further information about my methodology on the
-            button below.
-          </p>
-       <!--THIS SHOULD BE A HYPERL-->
-        <div class="pg2link2">
-          <a href="workwithme/index.html" style="text-decoration: none; color:white;"
-            >WORK WITH ME</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="pg3container">
-      <div class="pg3img"></div>
-      <div class="pg3content">
-        <h1 style="margin-bottom: 2rem;">Meet Willy</h1>
-        I felt very passionate about webdesign when I started working for a
-        online printer. After a few courses and a year of webdevelopment
-        intensive classes I started working as junior front end developer for
-        "Obama's elf development". After 5 years I became a senior developer and
-        an expert in Java. 2020 I decided to star working as a freelancer.
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footerlogo"><img src="logofull.png" alt="logo" /></div>
-      <div class="socialmedia">Find me on social media</div>
-      <div id="instagram" class="instagram">
-        <a href="https://www.instagram.com/modern.stalking.heads/">
-          <img
-            src="Circled_Instagram_svg-128.png"
-            alt="insta"
-            style="width:60%"
-            href=""
-        /></a>
-      </div>
-      <div id="facebook" class="facebook">
-        <a href="https://www.facebook.com/guillermo.calvodemora"
-          ><img src="Circled_Facebook_svg-128.png" alt="fb" style="width:60%"
-        /></a>
-      </div>
-      <div id="twitter" class="twitter">
-        <a href="https://twitter.com/willyscdmn/"
-          ><img
-            src="Circled_Twitter_svg-128.png"
-            alt="twitter"
-            style="width:60%"
-        /></a>
-      </div>
-      <div id="linkedin" class="linkedin">
-        <a href="https://de.linkedin.com/in/willi-calvo-78a62647"
-          ><img
-            src="Circled_Linkedin_svg-128.png"
-            alt="linkedin"
-            style="width:60%"
-        /></a>
-      </div>
-    </div>
-    <script src="noframework.waypoints.min.js"></script>
-    <script src="behaviour.js"></script>
+      </section>
+      <section class="aboutMe" id="aboutMe">
+        <div class="sectionTitle">Meet Willy</div>
+        <div class="aboutMeImg"></div>
+        <article class="aboutMeContent"><span>Hi there! Allthough the internet knows me as willoid and my birth certificate's name is Guillermo, you can call me Willy! I am a Leipzig based full stack developer looking for new challenges to develop custom made solutions for companies or private clients. Take a look at my skills below! </span></article>
+      </section>
+      <footer id="contact"></footer>
+    </main>
+
+   
+    <!-- <script src="noframework.waypoints.min.js"></script> -->
+    <script src="index.js"></script>
   </body>
 </html>

@@ -1,357 +1,243 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #ebc8cc;
+  --transPink: rgba(235, 200, 204, 0.4);
+  --celeste: #d0dfdd;
+  --transCeleste: rgba(208, 223, 221, 0.4);
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #252525;
+  --shadow: 5px 5px 15px 5px #000000;
+  --btnWidth: 150px;
+  --btnHeight: 50px;
+}
+body {
   font-family: "Montserrat";
 }
-/** how do I remove from vh the 2.3 from header? 
-minus sign doesn't work**/
-.hero {
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+/*Navbar Styling */
+nav {
+  width: 30vw;
+  height: 45vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.navBtn {
+  width: 3rem;
+  height: 3rem;
+  background: var(--transCeleste);
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.navList {
+  width: 30vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-45vh);
+  transition: all 1s ease-in;
+}
+
+.navList > li {
+  background: var(--transCeleste);
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  transition: all 1.5s ease-out;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.navList > li:nth-child(-n + 4) {
+  height: 10vh;
+}
+
+.navList > li:nth-child(5) {
+  height: 5vh;
+}
+/*Animating the navbar*/
+.navList.showNavList {
+  box-shadow: var(--shadow);
+  transform: translateY(0);
+  transition: all 1s ease-out;
+}
+
+.navBtn.hideNavBtn {
+  opacity: 0;
+}
+/*Landing Page*/
+header {
   width: 100vw;
   height: 101vh;
-  display: grid;
   background-image: url(https://images.pexels.com/photos/399160/pexels-photo-399160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
   background-position: bottom;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
-.col1 {
-  display: grid;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  z-index: -1;
 }
 
-h1 {
-  margin: 0;
-}
-/** how do I actually get my name above the blue line? **/
-.centralcol {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 2fr 1fr 8fr;
-}
-.col2 {
-  display: grid;
-  margin: 0;
-}
-.bigname {
-  margin-bottom: -30px;
-  display: grid;
-  background-color: transparent;
+.headerTitle,
+.headerSubtitle, .sectionTitle {
   color: white;
-  font-size: 30px;
-  justify-items: center;
-  align-items: end;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   z-index: 1;
-}
-.smallname {
-  background-color: transparent;
-  color: white;
-  display: grid;
-  justify-items: center;
-  align-items: top;
-  font-size: 30px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  z-index: 1;
-}
-.blueline {
-  height: 3rem;
-  width: 50rem;
-  display: grid;
-  background-color: #D0DFDD;
-  box-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-  1px 1px 0 #000;
-}
-.header {
-  width: 100vw;
-  height: 10vh;
-  display: grid;
-  grid-template-columns: 1fr 6fr 1.3fr 1.3fr;
-  grid-template-rows: 1fr;
-  position: absolute;
-  z-index: 100;
+  text-transform: uppercase;
 }
 
-.logo {
-  display: grid;
-  justify-items: center;
-  margin-right: -7rem;
+.headerTitle {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-top: 15vh;
+}
+
+.headerSubtitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.titleLine {
+  background: var(--celeste);
+  width: 95vw;
+  height: 4rem;
+  /*negative margin should be around the middle of the title*/
   margin-top: -2rem;
+  margin-bottom: -1.2rem;
 }
 
-.homebtn {
-  display: grid;
-  justify-items: end;
+.portfolioLink {
+  width: var(--btnWidth);
+  height: var(--btnHeight);
+  border: white solid 4px;
+  margin: 2rem;
+  box-shadow: 2px 2px 50px 2px white;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  background: var(--celeste);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+/*main section contains portfolio, about me and footer*/
+main {
+background: linear-gradient(to bottom, #d0dfdd, hsl(355, 44%, 84%));
 }
 
-.whatdoidobtn {
-  display: grid;
-  justify-items: center;
-  text-align: center;
-  align-items: center;
-  text-decoration: none;
-}
-
-.workwithmebtn {
-  display: grid;
-  justify-items: center;
-  text-align: center;
-  align-items: center;
-  text-decoration: none;
-}
-
-.pg2container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-  grid-template-rows: 100px auto;
-  max-width: 100vw;
-  margin-left: auto;
-  margin-right: auto;
-  height: 70vh;
-  background-color: #D0DFDD;
- 
-}
-
-.transition {
-
-  background-image: url(transition.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  height: 5vw;
-  
-}
-
-.pg2whatdoido {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  line-height: 2rem;
-  padding: 15px;
-}
-
-.pg2img {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;  
-  background-image: url(https://images.pexels.com/photos/1356300/pexels-photo-1356300.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-  background-size: cover;
-  background-position: center;
-  height:250px;
-  align-self: center;
-  border-radius: 500px;
-  position: relative;
-  top: -25%;
-  
-}
-
-.pg2workwithme {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  padding: 15px;
-  line-height: 2rem;
-  text-align: end;
-}
-
-/**positioning for the 2 links doesn#t work??**/
-
-.pg2link1 {
-  width: 10rem;
-  height: 2rem;
-  border-radius: 1rem;
-  background-color: hsl(355, 44%, 84%);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  color: white;
-  position: relative;
-  top:13%;
-  left:40%;
-  text-align: center;
-
-
-}
-
-.pg2link2 {
-  width: 10rem;
-  height: 2rem;
-  border-radius: 1rem;
-  background-color: hsl(355, 44%, 84%);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  color: white;
-  position: relative;
-  top:20%;
-  left:40%;
-  text-align: center;
-}
-
-.pg3container {
-  background: linear-gradient(
-    to bottom,
-    #D0DFDD,
-    hsl(355, 44%, 84%)
-  );
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  height: 30vh;
+.portfolio, .aboutMe, .contact {
   width: 100vw;
-  padding-top: 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.pg3img {
-  width: 200px;
-  height: 200px;
-  border-radius: 1000px;
-  margin: 2rem 0 0 2rem;
-  background-image: url(https://crescendo.de/wp-content/uploads/2019/12/Titel_pavarotti-01-1068x1048.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  left: 50%;
-  margin-top: 10%;
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-top: 5vh;
 }
 
-.pg3content {
- 
-  margin-right: 20%;
-  margin-left: -20%;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  justify-items: center;
-  padding: 5rem;
-  line-height: 2rem;
+.portfolioController {
+  width: 90vw;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.pg3content>h1 {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-  1px 1px 0 #000;
+.prevBtn, .nxtBtn {
+  width: 60px;
+  height: 60px;
+  box-shadow: var(--shadow);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
 }
 
+.portfolioGallery {
+ width: 90vw;
+ height: 60vh;
+ background: white;
+ box-shadow: inset 1px 1px 20px 4px rgba(0, 0, 0, 0.3);
+ display: flex;
+}
 
-.footer {
-  width: 100vw;
+.galleryCard {
+  width: 80vw;
   height: 50vh;
-  background-color: hsl(355, 44%, 84%);
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 5fr 4fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
+  box-shadow: 1px 1px 20px 5px var(--pink);
+  margin: auto;
+  display: flex;
+  background: var(--grey);
 }
 
-.footerlogo {
-  display: grid;
-  align-items: end;
-  margin-left: 5rem;
+.galleryCard > img {
+  max-width: 100%;
+  max-height: 40vh;
+  object-fit: fill;
+  margin: auto;
+  display: block;
 }
 
-.socialmedia {
-  display: grid;
-  align-items: end;
-  justify-items: end;
+figcaption {
   color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  stroke: lightslategray;
-  margin-bottom: 5rem;
-  margin-right: 2rem;
-  font-size: 25px;
+  text-align: center;
+  padding: 1rem;
+  height: 10vh;
+  width: 90%;
+  margin: auto;
+  box-shadow: 3px 3px 10px 1px var(--celeste);
+}
+/*aboutMe*/
+
+.aboutMeImg {
+
+  width: 80vw;
+  height: 80vw;
+  background-image: url(./assets/image12.png);
+  border-radius: 50% 50%;
+  background-position: 40% 25%;
 }
 
-.instagram {
-  display: grid;
-  margin-bottom: 5rem;
-  align-items: end;
-  justify-items: center;
-  margin-right: 1rem;
-}
+.aboutMeContent 
 
-.facebook {
-  display: grid;
-  margin-bottom: 5rem;
-  align-items: end;
-  justify-items: center;
-  margin-right: 1rem;
-}
 
-.twitter {
-  display: grid;
-  margin-bottom: 5rem;
-  align-items: end;
-  justify-items: center;
-  margin-right: 1rem;
-}
 
-.linkedin {
-  display: grid;
-  margin-bottom: 5rem;
-  align-items: end;
-  justify-items: center;
-  margin-right: 1rem;
-}
+/*for desktop*/
 
-/** here comes the css for the what do I do page **/
-.wdidhero {
-  width: 100vw;
-  height: 50vh;
-  background-image: url(https://images.pexels.com/photos/234527/pexels-photo-234527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background-position: bottom;
-  background-size: cover;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto;
-}
-
-.wdidherotxt {
-  display: grid;
-  background-color: transparent;
-  color: white;
-  font-size: 55px;
-  justify-items: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  align-items: center;
-}
-
-.wdidherocol1 {
-  display: grid;
-}
-
-.wdidherocol2 {
-  display: grid;
-}
-
-.wdidcontainer2 {
-  width: 100vw;
-  height: 80vh;
-  display: grid;
-  grid-template-columns: 0.75fr 3fr 1.5fr 0.75fr;
-  grid-template-rows: auto;
-}
-
-.wdidcontainermargleft {
-  display: grid;
-}
-
-.wdidcontainertxt {
-  display: grid;
-  background-color: hsla(355, 44%, 84%);
-  justify-items: center;
-}
-
-.wdidcontainerimg {
-  background-image: url(https://images.pexels.com/photos/1935220/pexels-photo-1935220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-  background-size: cover;
-}
-
-.wdidcontainermargright {
-  display: grid;
+ .navList > li:hover {
+  background: var(--pink);
+  transition: all 1.5s ease-out;
+  font-size: 1.2rem;
 }

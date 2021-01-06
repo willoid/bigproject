@@ -1,5 +1,39 @@
 //from https://github.com/daneden/animate.css
 
+//Animating Navbar
+
+const showNav = () => {
+  document.getElementById('navList').classList.add('showNavList');
+  document.getElementById('navBtn').classList.add('hideNavBtn') 
+}
+
+const hideNav = () => {
+  document.getElementById('navList').classList.remove('showNavList');
+  document.getElementById('navBtn').classList.remove('hideNavBtn') 
+}
+
+
+//handling Gallery
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("galleryCard");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display= "none";}
+    slides[slideIndex-1].style.display = "block";
+}
+
+
+/* 
 function animateCSS(element, animationName, callback) {
   const node = document.querySelector(element);
   node.classList.add("animated", animationName);
@@ -13,9 +47,9 @@ function animateCSS(element, animationName, callback) {
 
   node.addEventListener("animationend", handleAnimationEnd);
 }
-
+ */
 //the delay of the side elements is defined as class in the html?
-
+/* 
 document.getElementById("pg2whatdoido").onscroll = function() {
   animateCSS("#pg2whatdoido", "slideInLeft");
 };
@@ -68,3 +102,4 @@ document.getElementById("twitter2").onmouseover = function() {
 document.getElementById("linkedin2").onmouseover = function() {
   animateCSS("#linkedin2", "pulse");
 };
+ */
