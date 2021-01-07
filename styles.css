@@ -5,16 +5,16 @@
 }
 
 :root {
-  --pink: #ebc8cc;
-  --transPink: rgba(235, 200, 204, 0.8);
+  --pink: #e0b1b9;
+  --transPink: rgba(235, 200, 204, 0.9);
   --celeste: #d0dfdd;
-  --transCeleste: rgba(208, 223, 221, 0.8);
+  --transCeleste: rgba(208, 223, 221, 0.9);
   --white: #ffffff;
   --black: #000000;
   --grey: #252525;
   --shadow: 5px 5px 15px 5px #000000;
   --textShadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-  1px 1px 0 #000;
+    1px 1px 0 #000;
   --btnWidth: 150px;
   --btnHeight: 50px;
 }
@@ -154,13 +154,11 @@ header {
 }
 /*main section contains portfolio, about me and footer*/
 main {
-  background: linear-gradient(to bottom, #d0dfdd, hsl(355, 44%, 84%));
+  background: linear-gradient(to bottom, var(--celeste), var(--pink));
 }
 
 .portfolio,
-.aboutMe,
-.skills,
-.contact {
+.aboutMe {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -168,6 +166,7 @@ main {
   align-items: center;
   position: relative;
 }
+
 /*sectionTitles must have 3rem at least bc of navBtn*/
 .sectionTitle {
   font-size: 2.8rem;
@@ -244,7 +243,7 @@ figcaption {
 .aboutMeContent {
   width: 90%;
   margin: 4vh auto 0 auto;
-position: relative;
+  position: relative;
   font-size: 11px;
 }
 
@@ -258,11 +257,20 @@ position: relative;
 }
 .fa-quote-left {
   position: absolute;
-  bottom:-50px;
+  bottom: -50px;
   right: 0;
   font-size: 50px;
   color: white;
   text-shadow: var(--textShadow);
+}
+
+.skills,
+#contact {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .skillsLink {
   position: absolute;
@@ -280,13 +288,12 @@ position: relative;
 }
 /*for desktop*/
 
-.fab, .iconify {
+.skillsIcon {
+  height: 60px;
   color: var(--celeste);
   font-size: 50px;
   text-shadow: var(--textShadow);
   margin: 15px;
-}
-.iconify {
   stroke: black;
   stroke-width: 0.5px;
 }
@@ -299,4 +306,15 @@ position: relative;
   background: var(--pink);
   transition: all 1.5s ease-out;
   font-size: 1.2rem;
+}
+
+.contactContainer {
+  width: 80vw;
+  background: var(--celeste);
+  box-shadow: 3px 3px 10px 1px var(--celeste);
+  margin: 50px;
+}
+
+.contactDetail {
+  font-size: 20px;
 }
