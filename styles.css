@@ -315,6 +315,16 @@ figcaption {
   margin: 50px;
 }
 
-.contactDetail {
+.contactContainer > i {
+  margin: 20px 0 0 20px;
   font-size: 20px;
+}
+
+.contactDetail {
+  margin-left: 20px;
+  font-weight: 200;
+}
+
+.address {
+  text-align: center;
 }
