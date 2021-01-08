@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --pink: #e0b1b9;
   --transPink: rgba(235, 200, 204, 0.9);
@@ -21,11 +20,14 @@
 body {
   font-family: "Montserrat";
 }
-
 a {
   color: inherit;
   text-decoration: none;
   display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+padding-top: 1em;
 }
 
 /*Navbar Styling */
@@ -37,7 +39,6 @@ nav {
   right: 0;
   z-index: 2;
 }
-
 .navBtn {
   width: 3rem;
   height: 3rem;
@@ -51,17 +52,15 @@ nav {
   box-shadow: var(--shadow);
   cursor: pointer;
 }
-
 .navList {
-  width: 30vw;
-  height: 45vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: absolute;
   transform: translateY(-45vh);
   transition: all 1s ease-in;
 }
-
 .navList > li {
   background: var(--transCeleste);
   width: 100%;
@@ -74,24 +73,23 @@ nav {
   font-size: 1rem;
   cursor: pointer;
 }
-
 .navList > li:nth-child(-n + 4) {
   height: 10vh;
 }
-
 .navList > li:nth-child(5) {
   height: 5vh;
 }
+
 /*Animating the navbar*/
 .navList.showNavList {
   box-shadow: var(--shadow);
   transform: translateY(0);
   transition: all 1s ease-out;
 }
-
 .navBtn.hideNavBtn {
   opacity: 0;
 }
+
 /*Landing Page*/
 header {
   width: 100vw;
@@ -105,7 +103,6 @@ header {
   align-items: center;
   z-index: -1;
 }
-
 .headerTitle,
 .headerSubtitle,
 .sectionTitle {
@@ -114,18 +111,15 @@ header {
   z-index: 1;
   text-transform: uppercase;
 }
-
 .headerTitle {
   font-size: 2.8rem;
   font-weight: 900;
   margin-top: 15vh;
 }
-
 .headerSubtitle {
   font-size: 2rem;
   font-weight: 700;
 }
-
 .titleLine {
   background: var(--celeste);
   width: 95vw;
@@ -134,7 +128,6 @@ header {
   margin-top: -2rem;
   margin-bottom: -1.2rem;
 }
-
 .btn {
   width: var(--btnWidth);
   height: var(--btnHeight);
@@ -148,15 +141,14 @@ header {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-
 .portfolioLink {
   margin: 2rem;
 }
+
 /*main section contains portfolio, about me and footer*/
 main {
   background: linear-gradient(to bottom, var(--celeste), var(--pink));
 }
-
 .portfolio,
 .aboutMe {
   width: 100vw;
@@ -166,14 +158,12 @@ main {
   align-items: center;
   position: relative;
 }
-
 /*sectionTitles must have 3rem at least bc of navBtn*/
 .sectionTitle {
   font-size: 2.8rem;
   font-weight: 900;
   margin-top: 3rem;
 }
-
 .portfolioController {
   width: 90vw;
   margin: 2rem 0;
@@ -181,7 +171,6 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
-
 .prevBtn,
 .nxtBtn {
   width: 60px;
@@ -193,7 +182,6 @@ main {
   font-size: 50px;
   cursor: pointer;
 }
-
 .portfolioGallery {
   width: 90vw;
   height: 60vh;
@@ -201,7 +189,6 @@ main {
   box-shadow: inset 1px 1px 20px 4px rgba(0, 0, 0, 0.3);
   display: flex;
 }
-
 .galleryCard {
   width: 80vw;
   height: 50vh;
@@ -210,7 +197,6 @@ main {
   display: flex;
   background: var(--grey);
 }
-
 .galleryCard > img {
   max-width: 100%;
   max-height: 40vh;
@@ -218,7 +204,6 @@ main {
   margin: auto;
   display: block;
 }
-
 figcaption {
   color: white;
   text-align: center;
@@ -228,8 +213,8 @@ figcaption {
   margin: auto;
   box-shadow: 3px 3px 10px 1px var(--celeste);
 }
-/*aboutMe*/
 
+/*aboutMe*/
 .aboutMeImg {
   width: 80vw;
   height: 80vw;
@@ -239,14 +224,12 @@ figcaption {
   background-size: cover;
   margin-top: 4vh;
 }
-
 .aboutMeContent {
   width: 90%;
   margin: 4vh auto 0 auto;
   position: relative;
   font-size: 11px;
 }
-
 .fa-quote-right {
   position: absolute;
   top: -50px;
@@ -263,7 +246,6 @@ figcaption {
   color: white;
   text-shadow: var(--textShadow);
 }
-
 .skills,
 #contact {
   width: 100vw;
@@ -286,8 +268,6 @@ figcaption {
   justify-content: space-evenly;
   margin-top: 4vh;
 }
-/*for desktop*/
-
 .skillsIcon {
   height: 60px;
   color: var(--celeste);
@@ -297,34 +277,71 @@ figcaption {
   stroke: black;
   stroke-width: 0.5px;
 }
-
 .mysql {
   font-size: 75px;
   stroke-width: 0.4px;
 }
-.navList > li:hover {
-  background: var(--pink);
-  transition: all 1.5s ease-out;
-  font-size: 1.2rem;
-}
 
+/*contact footer*/
 .contactContainer {
   width: 80vw;
   background: var(--celeste);
   box-shadow: 3px 3px 10px 1px var(--celeste);
   margin: 50px;
 }
-
 .contactContainer > i {
   margin: 20px 0 0 20px;
   font-size: 20px;
 }
-
 .contactDetail {
   margin-left: 20px;
   font-weight: 200;
 }
-
 .address {
   text-align: center;
+}
+
+/*desktop design*/
+@media (min-width: 1200px) {
+  /*hidden stuff*/
+  .navBtn, .navCloseBtn {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  nav {
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    left: 0;
+    box-shadow: var(--shadow);
+    background: linear-gradient(to bottom, var(--pink), var(--celeste));
+    opacity: 0.9;
+  }
+
+  .navList {
+    width: 100%;
+    height: 5vh;
+    flex-direction: row;
+    transform: translateY(0);
+    left: 0;
+  }
+
+  .navList > li {
+    background: transparent;
+  }
+  .navList > li:hover {
+    opacity: 1;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-shadow: var(--textShadow);
+    color: white;
+    box-shadow: inset 1px 1px 2px 1px black;
+    transition: all 0.7s ease-in;
+  }
+
+.titleLine {
+  width: 50vw;
+}
+
 }

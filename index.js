@@ -32,8 +32,8 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
 }
 
+//animating the elements after animate css (https://animate.style/)
 
-/* 
 function animateCSS(element, animationName, callback) {
   const node = document.querySelector(element);
   node.classList.add("animated", animationName);
@@ -47,7 +47,14 @@ function animateCSS(element, animationName, callback) {
 
   node.addEventListener("animationend", handleAnimationEnd);
 }
- */
+
+
+//animating first bg immage for desktop only
+const windowWidth = window.innerWidth;
+windowWidth > 1200 ? window.onload = function () {
+  console.log(windowWidth);
+  animateCSS("#landingPage", "fadeInDownBig")
+} : null;
 //the delay of the side elements is defined as class in the html?
 /* 
 document.getElementById("pg2whatdoido").onscroll = function() {
