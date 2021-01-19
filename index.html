@@ -21,6 +21,11 @@
     />
     <link rel="shortcut icon" type="image/x-icon" href="logoshort.png" />
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav>
@@ -37,16 +42,19 @@
       </ul>
     </nav>
     <header id="landingPage">
-      <div class="animated zoomIn delay-2s headerTitle" id="headerTitle">Willy Calvo</div>
+      <h1 class="animated zoomIn delay-2s headerTitle" id="headerTitle">
+        Willy Calvo
+      </h1>
       <div class="titleLine"></div>
-      <div class="animated zoomIn delay-2s headerSubtitle">web developer</div>
+      <h2 class="animated zoomIn delay-2s headerSubtitle">web developer</h2>
       <div class="portfolioLink btn">
         <a href="#portfolio">Check my work</a>
       </div>
     </header>
     <main>
       <section class="portfolio" id="portfolio">
-        <div class="sectionTitle">Projects</div>
+        <img src="./assets/transition0.png" width=100%>
+        <h2 class="sectionTitle">Projects</h2>
         <div class="portfolioController">
           <div class="prevBtn" onclick="plusSlides(-1)">
             <i class="fas fa-angle-left"></i>
@@ -91,7 +99,9 @@
           </figure>
         </div>
       </section>
+
       <section class="aboutMe" id="aboutMe">
+        <img src="./assets/transition1.png" width= 100%>
         <div class="sectionTitle">Meet Willy</div>
         <div class="aboutMeImg"></div>
         <article class="aboutMeContent">
@@ -99,14 +109,15 @@
           ><span
             >Hi there! I was named Guillermo (good luck pronouncing that), the
             Git knows me as willoid but you can just call me Willy. I am a
-            Leipzig based fullstack (mern) developer looking for new challenges to
-            develop custom made solutions for companies or private
+            Leipzig based fullstack (mern) developer looking for new challenges
+            to develop custom made solutions for companies or private
             clients.</span
           ><i class="fas fa-quote-left"></i>
         </article>
         <div class="skillsLink btn"><a href="#skills">Check my skills</a></div>
       </section>
       <section class="skills" id="skills">
+        <img src="./assets/transition2.png" width=100%>
         <div class="sectionTitle">Skills</div>
         <div class="skillsContainer">
           <i class="fab fa-html5 skillsIcon"></i>
@@ -115,22 +126,53 @@
           <i class="fab fa-node-js skillsIcon"></i>
           <i class="fab fa-js skillsIcon"></i>
           <i class="fab fa-react skillsIcon"></i>
-          <span class="iconify skillsIcon" data-icon="simple-icons:redux" data-inline="false"></span>
-          <span class="iconify skillsIcon" data-icon="logos:express" data-inline="false"></span>
-          <span class="iconify mysql skillsIcon" data-icon="simple-icons:mysql" data-inline="false"></span>
-          <span class="iconify skillsIcon" data-icon="logos:mongodb" data-inline="false"></span>
+          <span
+            class="iconify skillsIcon"
+            data-icon="simple-icons:redux"
+            data-inline="false"
+          ></span>
+          <span
+            class="iconify skillsIcon"
+            data-icon="logos:express"
+            data-inline="false"
+          ></span>
+          <span
+            class="iconify mysql skillsIcon"
+            data-icon="simple-icons:mysql"
+            data-inline="false"
+          ></span>
+          <span
+            class="iconify skillsIcon"
+            data-icon="logos:mongodb"
+            data-inline="false"
+          ></span>
           <i class="fas fa-code-branch skillsIcon"></i>
         </div>
       </section>
+     
       <footer id="contact">
+        <img src="./assets/transition3.png" width=100%>
         <div class="sectionTitle">Contact</div>
         <div class="contactContainer">
-          <i class="fas fa-at"><span class="contactDetail">www.willoid.live</span></i>
-          <i class="fas fa-envelope"><span class="contactDetail">willoid.webdev@gmail.com</span></i>
-          <i class="fab fa-github"><span class="contactDetail">github.willoid.io</span></i>
-          <i class="fab fa-linkedin-in"><span class="contactDetail">linkedin.com/in/willycalvo</span></i>
-          <i class="fas fa-map-marker-alt"><span class="contactDetail address">Windorfer Str. 104 D-04229 Leipzig (Germany)</span></i>
+          <i class="fas fa-at"
+            ><span class="contactDetail">www.willoid.live</span></i
+          >
+          <i class="fas fa-envelope"
+            ><span class="contactDetail">willoid.webdev@gmail.com</span></i
+          >
+          <i class="fab fa-github"
+            ><span class="contactDetail">github.willoid.io</span></i
+          >
+          <i class="fab fa-linkedin-in"
+            ><span class="contactDetail">linkedin.com/in/willycalvo</span></i
+          >
+          <i class="fas fa-map-marker-alt"
+            ><span class="contactDetail address"
+              >Windorfer Str. 104 D-04229 Leipzig (Germany)</span
+            ></i
+          >
         </div>
+        <iframe data-class="map"src="https://api.mapbox.com/styles/v1/willoid/ckk41reui4z5o17sinrh6uydg.html?fresh=true&title=false&access_token=pk.eyJ1Ijoid2lsbG9pZCIsImEiOiJja2s0MW9yMHIwY2JhMnZxbmhvOGh6dXlwIn0.IMT8jQqD-c0-kBbm_V5Q-g#13/51.317/12.351" width='100%' height='400px'></iframe>
       </footer>
     </main>
 

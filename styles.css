@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 :root {
-  --pink: #e0b1b9;
+  --lightpink: #ffddd2;
   --transPink: rgba(235, 200, 204, 0.9);
-  --celeste: #d0dfdd;
+  --celeste: #edf6f9;
+  --green: #87b9b2;
+  --darkGreen: #007b5f;
   --transCeleste: rgba(208, 223, 221, 0.9);
   --white: #ffffff;
   --black: #000000;
@@ -93,8 +95,8 @@ nav {
 /*Landing Page*/
 header {
   width: 100vw;
-  height: 101vh;
-  background-image: url(https://images.pexels.com/photos/399160/pexels-photo-399160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  height: 80vh;
+  background-image: url(./assets/landing.jpeg);
   background-size: cover;
   background-position: bottom;
   display: flex;
@@ -146,8 +148,7 @@ header {
 }
 
 /*main section contains portfolio, about me and footer*/
-main {
-  background: linear-gradient(to bottom, var(--celeste), var(--pink));
+.portfolio {background: var(--lightpink); 
 }
 .portfolio,
 .aboutMe {
@@ -162,7 +163,7 @@ main {
 .sectionTitle {
   font-size: 2.8rem;
   font-weight: 900;
-  margin-top: 3rem;
+  margin-top: 10px;
 }
 .portfolioController {
   width: 90vw;
@@ -181,6 +182,7 @@ main {
   align-items: center;
   font-size: 50px;
   cursor: pointer;
+  z-index: 1000;
 }
 .portfolioGallery {
   width: 90vw;
@@ -215,6 +217,9 @@ figcaption {
 }
 
 /*aboutMe*/
+.aboutMe {
+  background: var(--celeste);
+}
 .aboutMeImg {
   width: 80vw;
   height: 80vw;
@@ -245,6 +250,9 @@ figcaption {
   font-size: 50px;
   color: white;
   text-shadow: var(--textShadow);
+}
+.skills {
+  background: var(--green);
 }
 .skills,
 #contact {
@@ -283,6 +291,10 @@ figcaption {
 }
 
 /*contact footer*/
+
+footer {
+  background: var(--darkGreen);
+}
 .contactContainer {
   width: 80vw;
   background: var(--celeste);
@@ -344,4 +356,9 @@ figcaption {
   width: 50vw;
 }
 
+}
+
+.map {
+  width: 100vw;
+  height: 100vh;
 }
