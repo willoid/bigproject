@@ -5,11 +5,11 @@
 }
 :root {
   --lightpink: #ffddd2;
-  --transPink: rgba(235, 200, 204, 0.9);
+  --transPink: rgba(255, 221, 210, 0.9);
   --celeste: #edf6f9;
   --green: #87b9b2;
   --darkGreen: #007b5f;
-  --transCeleste: rgba(208, 223, 221, 0.9);
+  --transCeleste: rgba(237, 246, 249, 0.9);
   --white: #ffffff;
   --black: #000000;
   --grey: #252525;
@@ -29,39 +29,26 @@ a {
   width: 100%;
   height: 100%;
   text-align: center;
-padding-top: 1em;
+  padding-top: 1em;
 }
+
 
 /*Navbar Styling */
 nav {
-  width: 30vw;
-  height: 45vh;
+  width: 100vw;
+  height: 8vh;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 2;
 }
-.navBtn {
-  width: 3rem;
-  height: 3rem;
-  background: var(--transCeleste);
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 2.5rem;
-  position: fixed;
-  top: 0;
-  right: 0;
-  text-align: center;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-}
+
 .navList {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
-  transform: translateY(-45vh);
-  transition: all 1s ease-in;
 }
 .navList > li {
   background: var(--transCeleste);
@@ -74,12 +61,6 @@ nav {
   transition: all 1.5s ease-out;
   font-size: 1rem;
   cursor: pointer;
-}
-.navList > li:nth-child(-n + 4) {
-  height: 10vh;
-}
-.navList > li:nth-child(5) {
-  height: 5vh;
 }
 
 /*Animating the navbar*/
@@ -95,7 +76,7 @@ nav {
 /*Landing Page*/
 header {
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   background-image: url(./assets/landing.jpeg);
   background-size: cover;
   background-position: bottom;
@@ -123,18 +104,18 @@ header {
   font-weight: 700;
 }
 .titleLine {
-  background: var(--celeste);
   width: 95vw;
   height: 4rem;
   /*negative margin should be around the middle of the title*/
-  margin-top: -2rem;
-  margin-bottom: -1.2rem;
+  margin-top: -2.8rem;
+  margin-bottom: -0.8rem;
+  position: relative;
+  /* border: red 1px solid; */
 }
 .btn {
   width: var(--btnWidth);
   height: var(--btnHeight);
   border: white solid 4px;
-
   box-shadow: 2px 2px 50px 2px white;
   display: flex;
   align-items: center;
@@ -142,13 +123,14 @@ header {
   background: var(--celeste);
   text-transform: uppercase;
   font-size: 0.8rem;
-}
-.portfolioLink {
-  margin: 2rem;
+  margin-top: 50px;
 }
 
+
 /*main section contains portfolio, about me and footer*/
-.portfolio {background: var(--lightpink); 
+.portfolio {
+  background: var(--lightpink);
+  margin-top: -2px;
 }
 .portfolio,
 .aboutMe {
@@ -167,7 +149,7 @@ header {
 }
 .portfolioController {
   width: 90vw;
-  margin: 2rem 0;
+  margin: 12px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -176,53 +158,58 @@ header {
 .nxtBtn {
   width: 60px;
   height: 60px;
-  box-shadow: var(--shadow);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
-  cursor: pointer;
   z-index: 1000;
+}
+
+.fas, .fab {
+  color: white;
+  text-shadow: var(--textShadow);
+  font-size: 50px;
 }
 .portfolioGallery {
   width: 90vw;
   height: 60vh;
-  background: white;
-  box-shadow: inset 1px 1px 20px 4px rgba(0, 0, 0, 0.3);
-  display: flex;
+  
 }
 .galleryCard {
-  width: 80vw;
-  height: 50vh;
-  box-shadow: 1px 1px 20px 5px var(--pink);
+  width: 100%;
+  height: 100%;
   margin: auto;
-  display: flex;
-  background: var(--grey);
+  background: var(-lightpink);
+  position: relative;
+ 
 }
 .galleryCard > img {
-  max-width: 100%;
-  max-height: 40vh;
-  object-fit: fill;
-  margin: auto;
-  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 figcaption {
-  color: white;
+  background: var(--transPink);
   text-align: center;
-  padding: 1rem;
-  height: 10vh;
-  width: 90%;
-  margin: auto;
-  box-shadow: 3px 3px 10px 1px var(--celeste);
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+}
+
+figcaption > a {
+  padding: 5px;
 }
 
 /*aboutMe*/
 .aboutMe {
   background: var(--celeste);
+  margin-top: -2px;
 }
 .aboutMeImg {
-  width: 80vw;
-  height: 80vw;
+  width: 60vw;
+  height: 60vw;
   background-image: url(./assets/image12.png);
   border-radius: 50% 50%;
   background-position: 40% 25%;
@@ -239,25 +226,19 @@ figcaption {
   position: absolute;
   top: -50px;
   left: 0;
-  font-size: 50px;
-  color: white;
-  text-shadow: var(--textShadow);
 }
 .fa-quote-left {
   position: absolute;
   bottom: -50px;
   right: 0;
-  font-size: 50px;
-  color: white;
-  text-shadow: var(--textShadow);
 }
 .skills {
   background: var(--green);
+  height: 100vh;
 }
 .skills,
 #contact {
   width: 100vw;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -266,6 +247,10 @@ figcaption {
   position: absolute;
   bottom: 25px;
   left: calc(50% - (var(--btnWidth) / 2));
+  background: var(--green);
+  border: white solid 4px;
+
+  box-shadow: 2px 2px 50px 2px var(--green);
 }
 .skillsContainer {
   width: 100%;
@@ -278,15 +263,14 @@ figcaption {
 }
 .skillsIcon {
   height: 60px;
-  color: var(--celeste);
+  color: white;
   font-size: 50px;
-  text-shadow: var(--textShadow);
   margin: 15px;
   stroke: black;
   stroke-width: 0.5px;
 }
 .mysql {
-  font-size: 75px;
+  font-size: 80px;
   stroke-width: 0.4px;
 }
 
@@ -294,6 +278,7 @@ figcaption {
 
 footer {
   background: var(--darkGreen);
+  margin-top: -2px;
 }
 .contactContainer {
   width: 80vw;
@@ -313,10 +298,21 @@ footer {
   text-align: center;
 }
 
+/*bigger sized handys*/
+
+@media (min-width: 350px) {
+.headerTitle {
+  font-size: 3.1rem;
+}
+.btn{
+  margin-top: 75px;
+}
+}
 /*desktop design*/
 @media (min-width: 1200px) {
   /*hidden stuff*/
-  .navBtn, .navCloseBtn {
+  .navBtn,
+  .navCloseBtn {
     display: none;
     visibility: hidden;
     opacity: 0;
@@ -352,10 +348,9 @@ footer {
     transition: all 0.7s ease-in;
   }
 
-.titleLine {
-  width: 50vw;
-}
-
+  .titleLine {
+    width: 50vw;
+  }
 }
 
 .map {

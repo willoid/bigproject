@@ -65,11 +65,11 @@ windowWidth > 1200
     })
   : null;
 //the delay of the side elements is defined as class in the html?
-/* 
-document.getElementById("pg2whatdoido").onscroll = function() {
-  animateCSS("#pg2whatdoido", "slideInLeft");
-};
 
+/* document.getElementById("portfolioTrigger").onscroll = function() {
+  animateCSS("#portfolio", "fadeIn");
+}; */
+/* 
 document.getElementById("pg2img").onscroll = function() {
   animateCSS("#pg2img", "slideInUp");
 };

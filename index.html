@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Willy Calvo</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
@@ -29,33 +30,33 @@
   </head>
   <body>
     <nav>
-      <div class="navBtn" id="navBtn" onclick="showNav()">
-        <i class="fas fa-bars"></i>
-      </div>
       <ul class="navList" id="navList">
         <li><a href="#" onclick="hideNav()">Home</a></li>
         <li><a href="#portfolio" onclick="hideNav()">Portfolio</a></li>
         <li><a href="#aboutMe" onclick="hideNav()">About</a></li>
         <li><a href="#contact" onclick="hideNav()">Contact</a></li>
-        <!--displayed in mobile only-->
-        <li class="navCloseBtn" onclick="hideNav()">Close</li>
       </ul>
     </nav>
     <header id="landingPage">
-      <h1 class="animated zoomIn delay-2s headerTitle" id="headerTitle">
+      <h1 class="animated fadeIn delay-1s headerTitle" id="headerTitle">
         Willy Calvo
       </h1>
-      <div class="titleLine"></div>
-      <h2 class="animated zoomIn delay-2s headerSubtitle">web developer</h2>
+      <div class="titleLine">
+      <svg viewbox= "38 41 160 160">
+
+        <path style="fill:var(--celeste)" d="m 38.529158,50.738063 c 66.723052,35.41098 76.614952,-34.929956 158.505712,0.05073 l -0.0815,23.065356 C 125.99796,31.27081 111.42796,107.35372 39.084645,72.697285 Z"/>
+      </svg>
+    </div>
+      <h2 class="animated fadeIn delay-1s headerSubtitle">web developer</h2>
       <div class="portfolioLink btn">
         <a href="#portfolio">Check my work</a>
       </div>
     </header>
     <main>
       <section class="portfolio" id="portfolio">
-        <img src="./assets/transition0.png" width=100%>
+        <img src="./assets/transition0.png" width="100%" />
         <h2 class="sectionTitle">Projects</h2>
-        <div class="portfolioController">
+        <div class="portfolioController" id="portfolioTrigger">
           <div class="prevBtn" onclick="plusSlides(-1)">
             <i class="fas fa-angle-left"></i>
           </div>
@@ -65,7 +66,7 @@
         </div>
 
         <div class="portfolioGallery">
-          <figure class="galleryCard">
+          <figure class="galleryCard animated fadeIn delay-0.5s">
             <img src="/assets/bjoern.png" />
             <figcaption>
               <a href="https://willoid.github.io/schnukkiweb/"
@@ -73,7 +74,7 @@
               >
             </figcaption>
           </figure>
-          <figure class="galleryCard">
+          <figure class="galleryCard animated fadeIn delay-0.5s">
             <img src="/assets/laurette.png" />
             <figcaption>
               <a href="https://willoid.github.io/laurette/"
@@ -81,7 +82,7 @@
               >
             </figcaption>
           </figure>
-          <figure class="galleryCard">
+          <figure class="galleryCard animated fadeIn delay-0.5s">
             <img src="/assets/quiz.png" />
             <figcaption>
               <a href="https://willoid.github.io/selfawareness-quiz/"
@@ -89,7 +90,7 @@
               >
             </figcaption>
           </figure>
-          <figure class="galleryCard">
+          <figure class="galleryCard animated fadeIn delay-0.5s">
             <img src="/assets/flights.png" />
             <figcaption>
               <a href="https://github.com/belccarvalho/Flight-Search"
@@ -101,7 +102,7 @@
       </section>
 
       <section class="aboutMe" id="aboutMe">
-        <img src="./assets/transition1.png" width= 100%>
+        <img src="./assets/transition1.png" width="100%" />
         <div class="sectionTitle">Meet Willy</div>
         <div class="aboutMeImg"></div>
         <article class="aboutMeContent">
@@ -117,7 +118,7 @@
         <div class="skillsLink btn"><a href="#skills">Check my skills</a></div>
       </section>
       <section class="skills" id="skills">
-        <img src="./assets/transition2.png" width=100%>
+        <img src="./assets/transition2.png" width="100%" />
         <div class="sectionTitle">Skills</div>
         <div class="skillsContainer">
           <i class="fab fa-html5 skillsIcon"></i>
@@ -149,9 +150,9 @@
           <i class="fas fa-code-branch skillsIcon"></i>
         </div>
       </section>
-     
+
       <footer id="contact">
-        <img src="./assets/transition3.png" width=100%>
+        <img src="./assets/transition3.png" width="100%" />
         <div class="sectionTitle">Contact</div>
         <div class="contactContainer">
           <i class="fas fa-at"
@@ -172,7 +173,12 @@
             ></i
           >
         </div>
-        <iframe data-class="map"src="https://api.mapbox.com/styles/v1/willoid/ckk41reui4z5o17sinrh6uydg.html?fresh=true&title=false&access_token=pk.eyJ1Ijoid2lsbG9pZCIsImEiOiJja2s0MW9yMHIwY2JhMnZxbmhvOGh6dXlwIn0.IMT8jQqD-c0-kBbm_V5Q-g#13/51.317/12.351" width='100%' height='400px'></iframe>
+        <iframe
+          data-class="map"
+          src="https://api.mapbox.com/styles/v1/willoid/ckk41reui4z5o17sinrh6uydg.html?fresh=true&title=false&access_token=pk.eyJ1Ijoid2lsbG9pZCIsImEiOiJja2s0MW9yMHIwY2JhMnZxbmhvOGh6dXlwIn0.IMT8jQqD-c0-kBbm_V5Q-g#12.5/51.317/12.327"
+          width="100%"
+          height="400px"
+        ></iframe>
       </footer>
     </main>
 
