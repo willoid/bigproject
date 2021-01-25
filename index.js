@@ -69,56 +69,33 @@ windowWidth > 1200
 /* document.getElementById("portfolioTrigger").onscroll = function() {
   animateCSS("#portfolio", "fadeIn");
 }; */
-/* 
-document.getElementById("pg2img").onscroll = function() {
-  animateCSS("#pg2img", "slideInUp");
-};
+//self-invoking function to trigger onscroll animations once
+ (function() {
+  var elements;
+  var windowHeight;
 
-document.getElementById("pg2workwithme").onscroll = function() {
-  animateCSS("#pg2workwithme", "slideInRight");
-};
+  function init() {
+    elements = document.querySelectorAll('.hidden');
+    windowHeight = window.innerHeight;
+  }
 
-var waypoint = new Waypoint({
-  element: document.getElementById("pg2container"),
-  handler: function(direction) {
-    animateCSS("#pg2whatdoido", "slideInLeft", "delay-3s");
-    animateCSS("#pg2img", "slideInUp");
-    animateCSS("#pg2workwithme", "slideInRight", "delay-3s");
-  },
-  offset: "100%"
-});
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top * 1.1;
 
-document.getElementById("instagram").onmouseover = function() {
-  animateCSS("#instagram", "pulse");
-};
+      if (positionFromTop - windowHeight < 0) {
+        element.classList.add('animated', 'fadeIn');
+        element.classList.remove('hidden');
+      }
+    }
+  }
 
-document.getElementById("facebook").onmouseover = function() {
-  animateCSS("#facebook", "pulse");
-};
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
 
-document.getElementById("twitter").onmouseover = function() {
-  animateCSS("#twitter", "pulse");
-};
+  init();
+  checkPosition();
+})();
 
-document.getElementById("linkedin").onmouseover = function() {
-  animateCSS("#linkedin", "pulse");
-};
-document.getElementById("instagram2").onmouseover = function() {
-  animateCSS("#instagram2", "pulse");
-};
-
-document.getElementById("facebook2").onmouseover = function() {
-  animateCSS("#facebook2", "pulse");
-};
-
-document.getElementById("twitter2").onmouseover = function() {
-  animateCSS("#twitter2", "pulse");
-};
-
-document.getElementById("linkedin2").onmouseover = function() {
-  animateCSS("#linkedin2", "pulse");
-};
- */
-
-//the map
 

@@ -5,7 +5,7 @@
 }
 :root {
   --lightpink: #ffddd2;
-  --transPink: rgba(255, 221, 210, 0.9);
+  --transPink: rgba(255, 221, 210, 0.7);
   --celeste: #edf6f9;
   --green: #87b9b2;
   --darkGreen: #007b5f;
@@ -18,6 +18,7 @@
     1px 1px 0 #000;
   --btnWidth: 150px;
   --btnHeight: 50px;
+  --animate-duration: 2s;
 }
 body {
   font-family: "Montserrat";
@@ -32,6 +33,13 @@ a {
   padding-top: 1em;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+img {
+  margin-top: -2px;
+}
 
 /*Navbar Styling */
 nav {
@@ -86,31 +94,34 @@ header {
   align-items: center;
   z-index: -1;
 }
-.headerTitle,
-.headerSubtitle,
-.sectionTitle {
+h1,
+h2,
+h3 {
   color: white;
   text-shadow: var(--textShadow);
   z-index: 1;
   text-transform: uppercase;
 }
-.headerTitle {
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+h1 {
   font-size: 2.8rem;
   font-weight: 900;
   margin-top: 15vh;
 }
-.headerSubtitle {
-  font-size: 2rem;
-  font-weight: 700;
-}
+
 .titleLine {
   width: 95vw;
   height: 4rem;
   /*negative margin should be around the middle of the title*/
-  margin-top: -2.8rem;
+  margin-top: -2.98rem;
   margin-bottom: -0.8rem;
   position: relative;
-  /* border: red 1px solid; */
 }
 .btn {
   width: var(--btnWidth);
@@ -125,7 +136,6 @@ header {
   font-size: 0.8rem;
   margin-top: 50px;
 }
-
 
 /*main section contains portfolio, about me and footer*/
 .portfolio {
@@ -142,17 +152,14 @@ header {
   position: relative;
 }
 /*sectionTitles must have 3rem at least bc of navBtn*/
-.sectionTitle {
-  font-size: 2.8rem;
-  font-weight: 900;
-  margin-top: 10px;
-}
+
 .portfolioController {
   width: 90vw;
   margin: 12px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .prevBtn,
 .nxtBtn {
@@ -165,7 +172,7 @@ header {
   z-index: 1000;
 }
 
-.fas, .fab {
+.fas, .fab{
   color: white;
   text-shadow: var(--textShadow);
   font-size: 50px;
@@ -173,7 +180,6 @@ header {
 .portfolioGallery {
   width: 90vw;
   height: 60vh;
-  
 }
 .galleryCard {
   width: 100%;
@@ -181,7 +187,6 @@ header {
   margin: auto;
   background: var(-lightpink);
   position: relative;
- 
 }
 .galleryCard > img {
   width: 100%;
@@ -196,10 +201,6 @@ figcaption {
   width: 100%;
   position: absolute;
   bottom: 25px;
-}
-
-figcaption > a {
-  padding: 5px;
 }
 
 /*aboutMe*/
@@ -220,21 +221,23 @@ figcaption > a {
   width: 90%;
   margin: 4vh auto 0 auto;
   position: relative;
-  font-size: 11px;
+  font-size: 14px;
 }
 .fa-quote-right {
   position: absolute;
-  top: -50px;
+  top: -25px;
   left: 0;
+  font-size: 25px;
 }
 .fa-quote-left {
   position: absolute;
-  bottom: -50px;
+  bottom: -20px;
   right: 0;
+  font-size: 25px;
 }
 .skills {
   background: var(--green);
-  height: 100vh;
+  height: auto;
 }
 .skills,
 #contact {
@@ -248,7 +251,7 @@ figcaption > a {
   bottom: 25px;
   left: calc(50% - (var(--btnWidth) / 2));
   background: var(--green);
-  border: white solid 4px;
+  border: var(--celeste) solid 4px;
 
   box-shadow: 2px 2px 50px 2px var(--green);
 }
@@ -261,13 +264,15 @@ figcaption > a {
   justify-content: space-evenly;
   margin-top: 4vh;
 }
-.skillsIcon {
+.skillsIcon,
+.iconify {
   height: 60px;
   color: white;
   font-size: 50px;
   margin: 15px;
   stroke: black;
   stroke-width: 0.5px;
+  text-shadow: var(--textShadow);
 }
 .mysql {
   font-size: 80px;
@@ -280,33 +285,55 @@ footer {
   background: var(--darkGreen);
   margin-top: -2px;
 }
-.contactContainer {
-  width: 80vw;
-  background: var(--celeste);
-  box-shadow: 3px 3px 10px 1px var(--celeste);
-  margin: 50px;
-}
-.contactContainer > i {
-  margin: 20px 0 0 20px;
+
+#contact > i {
+  margin: 20px;
   font-size: 20px;
 }
-.contactDetail {
+
+.connect {
   margin-left: 20px;
   font-weight: 200;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
 }
-.address {
-  text-align: center;
+
+.fa-github,
+.fa-linkedin-in,
+.fa-codepen {
+  margin: 25px;
+  font-size: 30px;
+}
+
+#contact > iframe {
+  margin: 50px 0;
+}
+
+.fas > span {
+  margin-left: 20px;
+  color: white;
+  text-shadow: none;
+}
+.map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.signature {
+  color: white;
+  margin: 10px;
 }
 
 /*bigger sized handys*/
 
 @media (min-width: 350px) {
-.headerTitle {
-  font-size: 3.1rem;
-}
-.btn{
-  margin-top: 75px;
-}
+  .headerTitle {
+    font-size: 3.1rem;
+  }
+  .btn {
+    margin-top: 75px;
+  }
 }
 /*desktop design*/
 @media (min-width: 1200px) {
@@ -353,7 +380,3 @@ footer {
   }
 }
 
-.map {
-  width: 100vw;
-  height: 100vh;
-}

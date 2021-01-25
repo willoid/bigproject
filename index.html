@@ -38,15 +38,15 @@
       </ul>
     </nav>
     <header id="landingPage">
-      <h1 class="animated fadeIn delay-1s headerTitle" id="headerTitle">
-        Willy Calvo
-      </h1>
+      <h1 class="animated fadeIn delay-1s" id="headerTitle">Willy Calvo</h1>
       <div class="titleLine">
-      <svg viewbox= "38 41 160 160">
-
-        <path style="fill:var(--celeste)" d="m 38.529158,50.738063 c 66.723052,35.41098 76.614952,-34.929956 158.505712,0.05073 l -0.0815,23.065356 C 125.99796,31.27081 111.42796,107.35372 39.084645,72.697285 Z"/>
-      </svg>
-    </div>
+        <svg viewbox="38 41 160 160">
+          <path
+            style="fill: var(--celeste)"
+            d="M 38.529158,50.738063 C 78.651844,79.085281 142.10402,17.674265 197.03487,50.788795 l -0.0815,23.065356 C 164.1925,35.678387 80.784537,95.238211 38.536795,72.236757 Z"
+          />
+        </svg>
+      </div>
       <h2 class="animated fadeIn delay-1s headerSubtitle">web developer</h2>
       <div class="portfolioLink btn">
         <a href="#portfolio">Check my work</a>
@@ -55,132 +55,133 @@
     <main>
       <section class="portfolio" id="portfolio">
         <img src="./assets/transition0.png" width="100%" />
-        <h2 class="sectionTitle">Projects</h2>
-        <div class="portfolioController" id="portfolioTrigger">
+        <h2>Projects</h2>
+        <div class="portfolioController hidden" id="portfolioTrigger">
           <div class="prevBtn" onclick="plusSlides(-1)">
             <i class="fas fa-angle-left"></i>
           </div>
+          <p class="porfolioExp">My most recents projects:</p>
           <div class="nxtBtn" onclick="plusSlides(1)">
             <i class="fas fa-angle-right"></i>
           </div>
         </div>
 
-        <div class="portfolioGallery">
-          <figure class="galleryCard animated fadeIn delay-0.5s">
-            <img src="/assets/bjoern.png" />
-            <figcaption>
-              <a href="https://willoid.github.io/schnukkiweb/"
-                >Website for the camera man Björn Düseler</a
-              >
-            </figcaption>
-          </figure>
-          <figure class="galleryCard animated fadeIn delay-0.5s">
-            <img src="/assets/laurette.png" />
-            <figcaption>
-              <a href="https://willoid.github.io/laurette/"
-                >Website for the artist Laurette le Gall</a
-              >
-            </figcaption>
-          </figure>
-          <figure class="galleryCard animated fadeIn delay-0.5s">
-            <img src="/assets/quiz.png" />
-            <figcaption>
-              <a href="https://willoid.github.io/selfawareness-quiz/"
-                >Quiz game for self awareness</a
-              >
-            </figcaption>
-          </figure>
-          <figure class="galleryCard animated fadeIn delay-0.5s">
-            <img src="/assets/flights.png" />
-            <figcaption>
-              <a href="https://github.com/belccarvalho/Flight-Search"
-                >Mock up of a flight search engine</a
-              >
-            </figcaption>
-          </figure>
+        <div class="portfolioGallery hidden">
+          <a href="https://willoid.github.io/schnukkiweb/"
+            ><figure class="galleryCard animated fadeIn delay-0.5s">
+              <img src="/assets/bjoern.png" />
+              <figcaption>
+                Website for the cinematographer Björn Düseler
+              </figcaption>
+            </figure></a
+          >
+          <a href="https://willoid.github.io/laurette/"
+            ><figure class="galleryCard animated fadeIn delay-0.5s">
+              <img src="/assets/laurette.png" />
+              <figcaption>Website for the artist Laurette le Gall</figcaption>
+            </figure></a
+          >
+          <a href="https://willoid.github.io/selfawareness-quiz/"
+            ><figure class="galleryCard animated fadeIn delay-0.5s">
+              <img src="/assets/quiz.png" />
+              <figcaption>Quiz game for self awareness</figcaption>
+            </figure></a
+          >
+          <a href="https://github.com/belccarvalho/Flight-Search"
+            ><figure class="galleryCard animated fadeIn delay-0.5s">
+              <img src="/assets/flights.png" />
+              <figcaption>Mock up of a flight search engine</figcaption>
+            </figure></a
+          >
         </div>
       </section>
 
       <section class="aboutMe" id="aboutMe">
         <img src="./assets/transition1.png" width="100%" />
-        <div class="sectionTitle">Meet Willy</div>
-        <div class="aboutMeImg"></div>
-        <article class="aboutMeContent">
-          <i class="fas fa-quote-right"></i
+        <h2>Meet Willy</h2>
+        <div class="aboutMeImg hidden"></div>
+        <article class="aboutMeContent hidden">
+          <i class="fas fa-quote-right hidden"></i
           ><span
-            >Hi there! I was named Guillermo (good luck pronouncing that), the
-            Git knows me as willoid but you can just call me Willy. I am a
-            Leipzig based fullstack (mern) developer looking for new challenges
-            to develop custom made solutions for companies or private
-            clients.</span
-          ><i class="fas fa-quote-left"></i>
+            >Hi there! My name is Guillermo but everyone calls me Willy. I am a
+            Leipzig based fullstack (MERN) developer looking for new challenges,
+            creative teams and bold ideas. Coming from the eCommerece world, I
+            can contribute with my experience but also offer an intercultural
+            approach together with a fascination for online marketing and
+            streaming media.</span
+          ><i class="fas fa-quote-left hidden"></i>
         </article>
-        <div class="skillsLink btn"><a href="#skills">Check my skills</a></div>
+        <div class="skillsLink btn">
+          <a href="www.linkedin.com/in/willycalvo">Check my CV</a>
+        </div>
       </section>
       <section class="skills" id="skills">
         <img src="./assets/transition2.png" width="100%" />
-        <div class="sectionTitle">Skills</div>
+        <h2>Skills</h2>
         <div class="skillsContainer">
-          <i class="fab fa-html5 skillsIcon"></i>
-          <i class="fab fa-css3-alt skillsIcon"></i>
-          <i class="fab fa-sass skillsIcon"></i>
-          <i class="fab fa-node-js skillsIcon"></i>
-          <i class="fab fa-js skillsIcon"></i>
-          <i class="fab fa-react skillsIcon"></i>
-          <span
-            class="iconify skillsIcon"
-            data-icon="simple-icons:redux"
-            data-inline="false"
-          ></span>
-          <span
-            class="iconify skillsIcon"
-            data-icon="logos:express"
-            data-inline="false"
-          ></span>
-          <span
-            class="iconify mysql skillsIcon"
-            data-icon="simple-icons:mysql"
-            data-inline="false"
-          ></span>
-          <span
-            class="iconify skillsIcon"
-            data-icon="logos:mongodb"
-            data-inline="false"
-          ></span>
-          <i class="fas fa-code-branch skillsIcon"></i>
+          <i class="fab fa-html5 skillsIcon hidden"></i>
+          <i class="fab fa-css3-alt skillsIcon hidden"></i>
+          <i class="fab fa-sass skillsIcon hidden"></i>
+          <i class="fab fa-node-js skillsIcon hidden"></i>
+          <i class="fab fa-js skillsIcon hidden"></i>
+          <i class="fab fa-react skillsIcon hidden"></i>
+          <div class="hidden">
+            <span
+              class="iconify skillsIcon"
+              data-icon="simple-icons:redux"
+              data-inline="false"
+            ></span>
+          </div>
+          <div class="hidden">
+            <span
+              class="iconify skillsIcon"
+              data-icon="logos:express"
+              data-inline="false"
+            ></span>
+          </div>
+          <div class="hidden">
+            <span
+              class="iconify mysql skillsIcon"
+              data-icon="simple-icons:mysql"
+              data-inline="false"
+            ></span>
+          </div>
+          <div class="hidden">
+            <span
+              class="iconify skillsIcon"
+              data-icon="logos:mongodb"
+              data-inline="false"
+            ></span>
+          </div>
+          <i class="fas fa-code-branch skillsIcon hidden"></i>
         </div>
       </section>
-
-      <footer id="contact">
-        <img src="./assets/transition3.png" width="100%" />
-        <div class="sectionTitle">Contact</div>
-        <div class="contactContainer">
-          <i class="fas fa-at"
-            ><span class="contactDetail">www.willoid.live</span></i
-          >
-          <i class="fas fa-envelope"
-            ><span class="contactDetail">willoid.webdev@gmail.com</span></i
-          >
-          <i class="fab fa-github"
-            ><span class="contactDetail">github.willoid.io</span></i
-          >
-          <i class="fab fa-linkedin-in"
-            ><span class="contactDetail">linkedin.com/in/willycalvo</span></i
-          >
-          <i class="fas fa-map-marker-alt"
-            ><span class="contactDetail address"
-              >Windorfer Str. 104 D-04229 Leipzig (Germany)</span
-            ></i
-          >
-        </div>
-        <iframe
-          data-class="map"
-          src="https://api.mapbox.com/styles/v1/willoid/ckk41reui4z5o17sinrh6uydg.html?fresh=true&title=false&access_token=pk.eyJ1Ijoid2lsbG9pZCIsImEiOiJja2s0MW9yMHIwY2JhMnZxbmhvOGh6dXlwIn0.IMT8jQqD-c0-kBbm_V5Q-g#12.5/51.317/12.327"
-          width="100%"
-          height="400px"
-        ></iframe>
-      </footer>
     </main>
+    <footer id="contact">
+      <img src="./assets/transition3.png" width="100%" />
+      <h2 class="hidden">Contact</h2>
+      <i class="fas fa-envelope hidden"
+        ><span class="contactDetail">willoid.webdev@gmail.com</span></i
+      >
+      <i class="fas fa-phone hidden"
+        ><span class="contactDetail">0176 83327305</span></i
+      >
+      <iframe
+        data-class="map"
+        src="https://api.mapbox.com/styles/v1/willoid/ckk41reui4z5o17sinrh6uydg.html?fresh=true&title=false&access_token=pk.eyJ1Ijoid2lsbG9pZCIsImEiOiJja2s0MW9yMHIwY2JhMnZxbmhvOGh6dXlwIn0.IMT8jQqD-c0-kBbm_V5Q-g#12.5/51.317/12.327"
+        width="100%"
+        height="400px"
+      ></iframe>
+      <h3>Connect with me</h3>
+
+      <span class="connect hidden"
+        ><a href="https://github.com/willoid"><i class="fab fa-github"></i></a
+        ><a href="www.linkedin.com/in/willycalvo"
+          ><i class="fab fa-linkedin-in"></i></a
+        ><a href="https://codepen.io/willoid"><i class="fab fa-codepen"></i></a
+      ></span>
+      <p class="signature">Willy Calvo (2020)</p>
+    </footer>
 
     <!-- <script src="noframework.waypoints.min.js"></script> -->
     <script src="index.js"></script>
